@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey1">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imgTemperature"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/temperature" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgTemperature"
+            android:layout_centerHorizontal="true"
+            android:text="Konversi Suhu"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="8dp" />
+
+        <LinearLayout
+            android:id="@+id/llInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTitle"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pilih Konversi : "
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical" />
+
+                <Spinner
+                    android:id="@+id/spSuhu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Masukkan Angka : "
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"/>
+
+                <EditText
+                    android:id="@+id/edInputSuhu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+          <Button
+            android:id="@+id/btnHitung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llInput"
+            android:layout_centerHorizontal="true"
+            android:text="Hitung"
+            android:backgroundTint="#7B1FA2"
+            android:textColor="#FFFFFF"
+            android:padding="8dp"
+            android:layout_marginTop="16dp"/>
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnHitung"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hasilnya : "
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/txtHasil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

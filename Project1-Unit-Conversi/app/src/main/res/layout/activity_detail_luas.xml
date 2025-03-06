@@ -1,0 +1,118 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/grey1">
+
+    <ImageView
+        android:id="@+id/imgLuas"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/wide" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgLuas"
+        android:layout_centerHorizontal="true"
+        android:text="Konversi Luas"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingTop="8dp" />
+
+    <LinearLayout
+        android:id="@+id/llInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pilih Konversi : "
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_gravity="center_vertical" />
+
+            <Spinner
+                android:id="@+id/spinnerKonversiLuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Masukkan Luas : "
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/etInputLuas"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnHitungLuas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llInput"
+        android:layout_centerHorizontal="true"
+        android:text="Hitung"
+        android:backgroundTint="#7B1FA2"
+        android:textColor="#FFFFFF"
+        android:padding="8dp"
+        android:layout_marginTop="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnHitungLuas"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hasilnya : "
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/tvHasilLuas"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+</RelativeLayout>
